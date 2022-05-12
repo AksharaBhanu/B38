@@ -118,7 +118,7 @@ public class BaseTest implements IAutoConst {
 			File srcfile = t.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(srcfile, new File("target/img/test.png")); //add test name with date and time
 			//add the screenshot to the test -at the top
-			test.addScreenCaptureFromPath("./../img/test.png");
+//			test.addScreenCaptureFromPath("./../img/test.png");
 			
 			//add the screenshot to the test - inside the step
 			test.fail(MediaEntityBuilder.createScreenCaptureFromPath("./../img/test.png").build());
