@@ -1,76 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Facebook – log in or sign up]]>
-    </line>
-    <line>
-      <![CDATA[admin]]>
-    </line>
-    <line>
-      <![CDATA[manager]]>
-    </line>
-    <line>
-      <![CDATA[bhanu]]>
-    </line>
-    <line>
-      <![CDATA[abcd]]>
-    </line>
-    <line>
-      <![CDATA[akshara]]>
-    </line>
-    <line>
-      <![CDATA[xyz]]>
-    </line>
   </reporter-output>
-  <suite started-at="2022-05-10T09:23:14 IST" name="Suite" finished-at="2022-05-10T09:23:19 IST" duration-ms="4820">
+  <suite started-at="2022-05-12T08:50:11 IST" name="Default suite" finished-at="2022-05-12T08:50:35 IST" duration-ms="23596">
     <groups>
       <group name="smoke">
-        <method signature="Demo1.test1()[pri:1, instance:script.Demo1@49139829]" name="test1" class="script.Demo1"/>
+        <method signature="ValidLogin.testValidLogin()[pri:1, instance:script.ValidLogin@6adbc9d]" name="testValidLogin" class="script.ValidLogin"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2022-05-10T09:23:14 IST" name="Test1" finished-at="2022-05-10T09:23:19 IST" duration-ms="4820">
-      <class name="script.Demo1">
-        <test-method is-config="true" signature="initReport()[pri:0, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:13 IST" name="initReport" finished-at="2022-05-10T09:23:14 IST" duration-ms="367" status="PASS">
+    <test started-at="2022-05-12T08:50:11 IST" name="Default test" finished-at="2022-05-12T08:50:35 IST" duration-ms="23596">
+      <class name="script.ValidLogin">
+        <test-method is-config="true" signature="initReport()[pri:0, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:11 IST" name="initReport" finished-at="2022-05-12T08:50:11 IST" duration-ms="324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initReport -->
-        <test-method is-config="true" signature="createTest(java.lang.reflect.Method)[pri:0, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:14 IST" name="createTest" finished-at="2022-05-10T09:23:14 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="createTest(java.lang.reflect.Method)[pri:0, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:11 IST" name="createTest" finished-at="2022-05-12T08:50:11 IST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void script.Demo1.test1()]]>
+                <![CDATA[public void script.ValidLogin.testValidLogin()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTest -->
-        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:14 IST" name="openApp" finished-at="2022-05-10T09:23:17 IST" duration-ms="3716" status="PASS">
+        <test-method is-config="true" signature="openApp(java.lang.String)[pri:0, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:11 IST" name="openApp" finished-at="2022-05-12T08:50:22 IST" duration-ms="10618" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[qa_config.properties]]>
+                <![CDATA[./config.properties]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="test1()[pri:1, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:17 IST" name="test1" finished-at="2022-05-10T09:23:18 IST" duration-ms="788" status="FAIL">
+        <test-method signature="testValidLogin()[pri:1, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:22 IST" name="testValidLogin" finished-at="2022-05-12T08:50:35 IST" duration-ms="12592" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [xyz] but found [abcd]]]>
+              <![CDATA[Home page is not displayed expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [xyz] but found [abcd]
+              <![CDATA[java.lang.AssertionError: Home page is not displayed expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at script.Demo1.test1(Demo1.java:25)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at script.ValidLogin.testValidLogin(ValidLogin.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,56 +63,40 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-at java.base/java.lang.Thread.run(Thread.java:831)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
-            <line>
-              <![CDATA[Facebook – log in or sign up]]>
-            </line>
-            <line>
-              <![CDATA[admin]]>
-            </line>
-            <line>
-              <![CDATA[manager]]>
-            </line>
-            <line>
-              <![CDATA[bhanu]]>
-            </line>
-            <line>
-              <![CDATA[abcd]]>
-            </line>
-            <line>
-              <![CDATA[akshara]]>
-            </line>
-            <line>
-              <![CDATA[xyz]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:18 IST" name="closeApp" finished-at="2022-05-10T09:23:19 IST" duration-ms="272" status="PASS">
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:35 IST" name="closeApp" finished-at="2022-05-12T08:50:35 IST" duration-ms="335" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=FAILURE method=Demo1.test1()[pri:1, instance:script.Demo1@49139829] output=Facebook – log in or sign up]]]>
+                <![CDATA[[TestResult name=testValidLogin status=FAILURE method=ValidLogin.testValidLogin()[pri:1, instance:script.ValidLogin@6adbc9d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.Demo1@49139829]" started-at="2022-05-10T09:23:19 IST" name="publishReport" finished-at="2022-05-10T09:23:19 IST" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:script.ValidLogin@6adbc9d]" started-at="2022-05-12T08:50:35 IST" name="publishReport" finished-at="2022-05-12T08:50:35 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- publishReport -->
-      </class> <!-- script.Demo1 -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Suite -->
+      </class> <!-- script.ValidLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
