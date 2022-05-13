@@ -11,7 +11,7 @@
           <include name="createTest"/>
           <include name="closeApp"/>
           <include name="publishReport"/>
-          <include name="testValidLogin"/>
+          <include name="testValidLogin" invocation-numbers="0"/>
         </methods>
       </class> <!-- script.ValidLogin -->
     </classes>

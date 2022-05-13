@@ -1,6 +1,6 @@
 <suite parallel="tests" name="Suite">
   <test name="Test1">
-  <parameter name="config" value="qa_config.properties"/>
+<!--   <parameter name="config" value="qa_config.properties"/> -->
     <packages>
       <package name="script"/>
     </packages>
