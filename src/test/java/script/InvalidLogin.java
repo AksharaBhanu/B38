@@ -8,16 +8,16 @@ import page.LoginPage;
 
 public class InvalidLogin extends BaseTest{
 
-	@Test(priority = 2,groups= {"smoke"})
-	public void testInvalidLogin() {
+	@Test(dataProvider = "getData", priority = 2,groups= {"smoke"})
+	public void testInvalidLogin(String un,String pw) {
 //		•	Enter invalid user name (abcd)
 		test.info("Enter invalid user name (abcd)");
 		LoginPage loginPage=new LoginPage(driver);
-		loginPage.setUserName("abcd");
+		loginPage.setUserName(un);
 		
 //		•	Enter invalid password (xyz)
 		test.info("Enter invalid password (xyz)");
-		loginPage.setPassword("xyz");
+		loginPage.setPassword(pw);
 		
 //		•	Click on login button
 		test.info("Click on login button");
