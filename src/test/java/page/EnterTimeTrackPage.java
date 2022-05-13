@@ -12,7 +12,7 @@ public class EnterTimeTrackPage {
 	}
 	
 	public boolean verifyPageTitle(WebDriverWait wait,String eTitle) {
-		
+
 		try 
 		{
 			wait.until(ExpectedConditions.titleContains(eTitle));

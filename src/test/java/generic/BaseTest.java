@@ -112,16 +112,17 @@ public class BaseTest implements IAutoConst {
 	public void closeApp(ITestResult result) throws Exception {
 		
 		int status=result.getStatus();
+		String testName=result.getName();
 		if(status==2) 
 		{
 			TakesScreenshot t=(TakesScreenshot)driver;
 			File srcfile = t.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(srcfile, new File("target/img/test.png")); //add test name with date and time
+			FileUtils.copyFile(srcfile, new File(IMG_PATH+testName+".png")); //add test name with date and time
 			//add the screenshot to the test -at the top
 //			test.addScreenCaptureFromPath("./../img/test.png");
 			
 			//add the screenshot to the test - inside the step
-			test.fail(MediaEntityBuilder.createScreenCaptureFromPath("./../img/test.png").build());
+			test.fail(MediaEntityBuilder.createScreenCaptureFromPath("./../img/"+testName+".png").build());
 			
 			String msg=result.getThrowable().getMessage();
 			test.fail("Reason:"+msg);  //add screenshot of the application to extent report
